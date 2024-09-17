@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pac-Man</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+        }
+        canvas {
+            border: 2px solid black;
+            display: block;
+            margin: 20px auto;
+        }
+        #score {
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            display: none;
+            margin-bottom: 10px;
+        }
+        #message {
+            text-align: center;
+            font-size: 24px;
+            color: green;
+            display: none;
+        }
+        #playAgain {
+            font-size: 18px;
+            padding: 10px;
+            display: none;
+            margin-top: 10px;
+        }
+        #NextLevel {
+            font-size: 18px;
+            padding: 10px;
+            display: none;
+            margin-top: 10px;
+        }
+        #level{
+            color: white;
+            text-align: center;
+            display: none;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div style="display: flex;">
+        <div style="margin-right: 1rem;" id="score">Score: 0</div>
+        <div id="level">Level: 0</div>
+    </div>
+    <div id="message">You won! Play again?</div>
+    <input id='mapLength' placeholder="MapLength"/>
+    <input id='ghosts' placeholder="Ghosts"/>
+    <button id="StartGame">Start own settings</button>
+    <button id="onLevels">Start on levels</button>
+    <canvas id="pacman" width="500" height="500"></canvas>
+    <button id="playAgain">Play again?</button>
+    <button id="NextLevel">Go Next Level</button>
+    <script src="game.ts"></script>
+</body>
+</html>
